@@ -34,6 +34,11 @@ nav{
 }
 .allpad{
     width: 90%;
+    /* display: flex;
+    align-items: center;
+    justify-content:space-between; */
+}
+.nav{
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -42,22 +47,73 @@ nav h1{
     font-size: 40px;
 
 }
-nav ul li{
+.nav-bar{
+    display: none;
+}
+.nav-bar ul li{
     list-style-type: none;
     display: inline-block;
     /* padding: 0 20px; */
     padding-left: 25px;
     font-size: 20px;
 }
-nav ul li a{
+.nav-bar ul li a{
     text-decoration: none;
     color: black;
 
 }
-nav ul li a:hover{
+.nav-bar ul li a:hover{
     color: var(--text-color);
     transition: 1s;
     text-decoration: underline;
+}
+.menu-bar{
+    display:none;
+}
+#nav-checkbox{
+    display: none;
+}
+.nav-toggle{
+    border: transparent;
+    background-color: transparent;
+    font-size: 1.5rem;
+    transition: .4s;
+    cursor: pointer;
+}
+.nav-toggle:hover{
+    transform: scale(1.5);
+}
+
+.menu-links li{
+    list-style: none;
+    transition: .4s;
+    padding:1rem 2rem 1rem 0 ;
+    display: none;
+    
+}
+.menu-links li a{
+    text-decoration: none;
+    display: none;
+}
+.menu-bar ul li:hover{
+    padding-left:0.25rem ;
+}
+/* 324 */
+/* .menu-links{
+    height: 0;
+    overflow: hidden;
+}
+.show-links{
+    height: 324px;
+} */
+#nav-checkbox:checked ~ .nav-toggle{
+    display: block;
+}
+#nav-checkbox:checked ~ .menu-bar ul li{
+    display: block;
+}
+#nav-checkbox:checked ~ .menu-bar ul li a{
+    display: block;
 }
 
 .all{
@@ -358,25 +414,28 @@ span{
     margin-bottom: 20px;
     position: relative;
 }
-.work-images img{
+.work-img{
     width: 100%;
+    transition: 0.4s;
     border-radius: 15px;
 }
 
-.work-images i{
+.work-icon{
     position: absolute;
     top: 50%;
-    right: 50%;
-    margin-right:-10px;
-    margin-bottom:-12px;
+    left: 50%;
+    transform: translate(-50% , -50%);
     font-size: 24px;
     color: var(--text-color);
-}
-/* .work-image:hover{
     opacity: 0;
-    background: rgba(255, 255, 255, .8);
     transition: .4s;
-} */
+}
+.work-image:hover .work-img{
+    opacity: 0.4;
+}
+.work-image:hover .work-icon{
+    opacity:1;
+} 
 .available{
     background-color: var(--main-back-color);
 
@@ -608,9 +667,12 @@ footer p{
 
 @media (max-width:900px) {
     /* HOME */
-    nav ul{
+    .nav-bar{
         display: none;
     }
+    /* .menu-bar{
+        display: block;
+    } */
     .home-intro{
         flex-direction: column;
     }
