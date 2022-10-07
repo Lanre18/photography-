@@ -67,9 +67,9 @@ nav h1{
     transition: 1s;
     text-decoration: underline;
 }
-.menu-bar{
+/* .menu-bar{
     display:none;
-}
+} */
 #nav-checkbox{
     display: none;
 }
@@ -88,33 +88,23 @@ nav h1{
     list-style: none;
     transition: .4s;
     padding:1rem 2rem 1rem 0 ;
-    display: none;
     
 }
 .menu-links li a{
     text-decoration: none;
-    display: none;
 }
-.menu-bar ul li:hover{
-    padding-left:0.25rem ;
+.menu-links ul li:hover{
+    padding-left:0.5rem ;
 }
 /* 324 */
-/* .menu-links{
+.menu-links{
     height: 0;
     overflow: hidden;
 }
 .show-links{
     height: 324px;
-} */
-#nav-checkbox:checked ~ .nav-toggle{
-    display: block;
 }
-#nav-checkbox:checked ~ .menu-bar ul li{
-    display: block;
-}
-#nav-checkbox:checked ~ .menu-bar ul li a{
-    display: block;
-}
+
 
 .all{
     background-color:var(--main-back-color);
@@ -207,27 +197,25 @@ span{
     align-items: center;
     justify-content: space-between;
 }
-.social-media{
-    display: flex;
-    align-items: center;
-}
 .social-media i{
     padding: 11px 12px;
-    /* margin:5px 10px; */
     border-radius: 10px;
     color:var(--text-color);
 
 }
+
 .social-media{
+    display: flex;
+    align-items: center;
     border: 1px solid hsla(225, 64%, 18%, 15);
     border-radius: 15px;
     background-color: var(--header);
     margin-right: 6px;
+    transition:1s;
 }
 
 .social-link{
     width: 100%;
-    /* width: 12rem; */
     text-decoration: none;
     display:inline-flex;
     align-items: center;
@@ -238,7 +226,7 @@ span{
     overflow: hidden;
     transform: translateX(1rem);
     overflow: hidden;
-    transition: all 1.2s ease;
+    transition: all 1s ease;
     white-space:nowrap;
     max-width: 0;
     text-transform: capitalize;
@@ -623,20 +611,20 @@ form{
     padding-bottom: 20px;
     margin-top: 16px;
 }
-.contact-info p{
-    padding-bottom: 20px;
+.contact-info-content{
+    margin-bottom: 20px;
 }
 .contact-info-content .social{
     display: flex;
     flex-direction:row;
-    width: 50%;
+    width: 30%;
 }
-.contact-info-content .social-media{
-    display: flex;
-    align-items: center;
-}
+
 .contact-info-content .social i{
     padding: 11px 12px;
+}
+.contact-info-content .social p{
+    padding-bottom: 0;
 }
 footer{
     background-color: var(--text-color);
